@@ -1,1 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #8bacda;
+  background-color: #0d192b;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 35rem;
+
+  background-color: #14253d;
+  padding: 2.4rem;
+  margin: 1.2rem auto;
+  border-radius: 1.5rem;
+  position: relative;
+}
+
+.card .img__container::before {
+  content: url("/nft-preview-card-component-main/images/icon-view.svg");
+  display: inline-block;
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s;
+}
+
+.card .img__container:hover::before {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card .img__container:hover .card__img {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    margin: 2.2rem auto;
+  }
+}
+
+.card .img__container {
+  margin-bottom: 2.8rem;
+  background-color: #00fff7;
+  border-radius: 0.8rem;
+}
+
+.card .img__container .card__img {
+  width: 30.2rem;
+  display: block;
+  border-radius: 0.8rem;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.card .img__container .card__img:hover {
+  opacity: 0.5;
+}
+
+.card .card__name {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.card .card__name:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.card .card__description {
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-bottom: 2.8rem;
+}
+
+.card .card__price-row {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #2f415b;
+}
+
+.card .card__price-row li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.card .card__price-row li img {
+  width: auto;
+  height: 2rem;
+  margin-right: 8px;
+}
+
+.card .card__price-row :first-child {
+  color: #00fff7;
+  font-weight: 600;
+}
+
+.card .card__price-row .days {
+  font-weight: 300;
+}
+
+.card .creator {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+.card .creator__img {
+  width: 3.4rem;
+  width: 3.4rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 1.6rem;
+}
+
+.card .creator__name span {
+  color: #fff;
+  font-weight: 400;
+  transition: color 0.4s;
+}
+
+.card .creator__name span:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
